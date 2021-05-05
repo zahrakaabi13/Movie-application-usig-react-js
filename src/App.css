@@ -1,0 +1,259 @@
+.App:focus{
+  outline: none !important;
+}
+*, 
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+}
+/*landing===
+===================================================*/
+:root{
+  --clr-bg-dark : #06111a;
+  --clr-primary-light : #fff;
+  --clr-secondary-redish : red;
+}
+
+
+body{
+  background-color: var(--clr-bg-dark) !important;
+}
+
+
+/*navbar===
+===================================================*/
+.navbar-light{
+  padding-left: 11% !important;
+  padding-right: 10% !important;
+}
+.navbar-light .navbar-brand {
+  color: var(--clr-primary-light) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--clr-primary-light) !important;
+  margin-left: 20px !important;
+}
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  border: none;
+  color: var(--clr-primary-light) !important;
+  border-bottom: solid 1px var(--clr-primary-light);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: -3px;
+}
+.form-control {
+  margin-left: 20px !important;
+  margin-top: -3px !important;
+  width: 100%;
+  border-radius: 0 !important;
+  font-size: .95rem !important;
+  color: var(--clr-primary-light) !important;
+  background: none !important;
+  border:none !important;
+  border-bottom: 1px solid var(--clr-primary-light) !important;
+}
+.heart{
+  font-size: 1.5rem;
+}
+
+/*landing===
+===================================================*/
+.landing{
+   background-color:var(--clr-bg-dark);
+   padding: 8%;
+   padding-top: 7% !important;
+   padding-left: 11% !important;
+   color: var(--clr-primary-light);
+   background-image: url(./images/witcher.jpg);
+   width: 100%;
+   height: 100vh;
+   background-size: cover;
+   background-position:center;
+}
+.landing h1{
+  font-size: 5rem;
+  font-weight: 1000;
+  max-width: 3ch;
+}
+.landing p{
+  font-size: .8rem !important;
+  max-width: 35ch !important;
+}
+.date{
+  margin-left: 30% !important;
+}
+.landing hr{
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 18px !important;
+  width: 3px !important;
+  background-color: var(--clr-secondary-redish) !important;
+}
+.landing h6{
+  color:var(--clr-primary-light);
+  font-size: .9rem;
+}
+.read--more,.read--more h5 {
+  font-size: .9rem;
+  color: var(--clr-secondary-redish);
+}
+.read--more i{
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.landing--cover .row{
+  margin-left: 30px;
+  position: absolute;
+  bottom: 0;
+}
+.landing--cover button{
+  border-radius: 50%;
+  padding: 20px 25px;
+  border: none;
+  background-color: var(--clr-secondary-redish) !important;
+  color: var(--clr-primary-light);
+  position: relative;
+}
+.landing--cover button::before{
+  content: "";
+  position: absolute;
+  background-color:red;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 50%;
+  animation: pulse 1000ms infinite;
+}
+
+@keyframes pulse{
+  0%{
+    transform: scale(.95);
+    opacity: 0.75;
+  }
+  100%{
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+.landing--cover h5{
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+
+
+
+/*social media==
+===============================================================*/
+.social--media{
+  transform: rotate(90deg);
+  display: flex;
+}
+.social--media h5{
+  font-size: 1rem !important;
+}
+
+
+
+
+
+/*cards===
+===================================================*/
+.cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+  cursor: pointer;
+}
+.card-body{
+  padding-left: 0 !important;
+}
+.movie{
+  border: none !important;
+  background:none !important;
+  width:15rem
+}
+.img{
+  border-radius: 10px !important;
+}
+.movie--title{
+  font-size: 1rem !important;
+  color: var(--clr-primary-light);
+}
+.movie--icons{
+  color: #515056 !important;
+  margin-left: 38% !important;
+  font-size: 0.8rem !important;
+}
+.movie--icons span:nth-child(1):hover,
+.movie--icons span:nth-child(2):hover{
+  color: var(--clr-secondary-redish) !important;
+}
+.movie--icons span:nth-child(3),
+.movie--icons span:nth-child(4){
+  color: #e2bc29 !important;
+}
+.movie--icons span{
+  color: #515056 !important;
+  margin-left: 10px !important;
+}
+.text-movie{
+  color: #515056 !important;
+}
+
+
+/*facebook chat===
+===================================================*/
+.images--witcher div{
+  border-radius: 5px;
+  height: 5rem;
+  width: 30%;
+  margin-left: 10px;
+  position: relative;
+}
+.images--witcher div:nth-child(1){
+  background-image: url("./images/01.png");
+  background-size: cover;
+}
+.images--witcher div:nth-child(2){
+  background-image: url("./images/02.jpg");
+  width: 30%;
+  background-size: cover;
+}
+.images--witcher div:nth-child(3){
+  background-image: url("./images/03.jpg");
+  width: 30%;
+  background-size: cover;
+}
+
+.images--witcher div:nth-child(1)::after{
+  content: '01';
+  font-size: 2rem;
+  font-weight: 500;
+  position:absolute;
+  bottom: -22px;
+  right: 0;
+}
+.images--witcher div:nth-child(2)::after{
+  content: '02';
+  font-size: 2rem;
+  font-weight: 500;
+  position:absolute;
+  bottom: -22px;
+  right: 0;
+}
+.images--witcher div:nth-child(3)::after{
+  content: '03';
+  font-size: 2rem;
+  font-weight: 500;
+  position:absolute;
+  bottom: -22px;
+  right: 0;
+}
