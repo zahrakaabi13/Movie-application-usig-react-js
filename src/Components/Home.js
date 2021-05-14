@@ -2,12 +2,13 @@ import Landing from "./Landingpage"
 import Movies from "./Movies"
 
 
-function Home(){
+function Home({movies,getFavoriteValue,searchInput}){
+ //home is the parent 
     return (
-        <div>
+        <>
             <Landing/>
-            <Movies/>
-        </div>
+            <Movies searchInput = {searchInput} getFavoriteValue={getFavoriteValue} movies={movies}/>
+        </>
     )
 }
 export default Home

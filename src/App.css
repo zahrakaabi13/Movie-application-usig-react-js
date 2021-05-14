@@ -1,5 +1,5 @@
 .App:focus{
-  outline: none !important;
+  outline: 0 !important;
 }
 *, 
 *::before,
@@ -15,24 +15,22 @@
   --clr-secondary-redish : red;
 }
 
+.search--box{
+  margin-left: 35% !important;
+}
 
 body{
   background-color: var(--clr-bg-dark) !important;
+  overflow-x: hidden !important;
 }
 
 
 /*navbar===
 ===================================================*/
 .navbar-light{
+  background-color: var(--clr-bg-dark);
   padding-left: 11% !important;
   padding-right: 10% !important;
-}
-.navbar-light .navbar-brand {
-  color: var(--clr-primary-light) !important;
-}
-.navbar-light .navbar-nav .nav-link {
-  color: var(--clr-primary-light) !important;
-  margin-left: 20px !important;
 }
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
@@ -55,8 +53,45 @@ body{
   border-bottom: 1px solid var(--clr-primary-light) !important;
 }
 .heart{
+  margin-top: 10px;
+  margin-left: 20px;
   font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--clr-primary-light);
+  cursor: pointer;
 }
+.favorite--value{
+  background-color: var(--clr-secondary-redish);
+  padding: 1px 6px !important;
+  border-radius: 50% ;
+  font-size: .5em;
+  position: absolute;
+  top: 14px;
+  right: 9%;
+  z-index: 1;
+  font-weight: bold;
+  color: var(--clr-primary-light) !important;
+}
+
+.heart:hover, .linked--brand:hover,
+.linked--page:hover{
+  text-decoration: none;
+  color: #fff;
+}
+.linked--brand{
+  text-decoration: none;
+  color:var(--clr-primary-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.linked--page{
+  color: var(--clr-primary-light);
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 10px 20px 10px 0 !important;
+  cursor: pointer;
+}
+
 
 /*landing===
 ===================================================*/
@@ -103,6 +138,8 @@ body{
 .read--more i{
   margin-left: 20px;
   margin-top: 5px;
+  position: relative;
+  z-index: 1;
 }
 .landing--cover .row{
   margin-left: 30px;
@@ -192,12 +229,13 @@ body{
   margin-left: 38% !important;
   font-size: 0.8rem !important;
 }
-.movie--icons span:nth-child(1):hover,
+.movie--icons span:first-child:hover,
 .movie--icons span:nth-child(2):hover{
   color: var(--clr-secondary-redish) !important;
 }
+
 .movie--icons span:nth-child(3),
-.movie--icons span:nth-child(4){
+.movie--icons span:last-child{
   color: #e2bc29 !important;
 }
 .movie--icons span{
@@ -256,4 +294,48 @@ body{
   position:absolute;
   bottom: -22px;
   right: 0;
+}
+
+
+
+
+
+/*Footer===
+===================================================*/
+.footer{
+  padding: 5% 13%;
+  margin-top: 60px;
+  border-top: 1px solid lightgray;
+}
+.footer h6{
+  margin-top: 20px;
+  margin-left: 20%;
+}
+
+.footer h5, .footer h6{
+  color: rgb(160, 160, 160);
+}
+.footer h5{
+  margin-left: 4%;
+  margin-bottom: 30px;
+}
+.footer select{
+  margin-top: 20px;
+  margin-left: 20%;
+  padding: 10px 20px;
+  background: none;
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer ul li {
+  list-style: none;
+}
+.footer .link{
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.fooetr .link:hover{
+  color: #fff;
 }
