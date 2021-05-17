@@ -2,7 +2,7 @@ import {Card} from 'react-bootstrap'
 
 
 //child is the navbar
-function Movies({searchInput, getFavoriteValue, movies}){
+function Movies({searchInput, getFavoriteValue, movies, getWatchedList}){
 
     return(
         <>
@@ -24,7 +24,7 @@ function Movies({searchInput, getFavoriteValue, movies}){
                     <span className="movie--icons">
                         {/* whenever you click you do the function n pass the movie */}
                         <span onClick={()=>getFavoriteValue(element)}><i class="fas fa-heart"></i></span>
-                        <span><i class="fas fa-eye"></i></span>
+                        <span onClick={()=>getWatchedList(element)}><i class="fas fa-eye"></i></span>
                         <span><i class="fas fa-star"></i></span>
                         <span>{element.Rate}</span>
                     </span>  
@@ -42,18 +42,4 @@ export default Movies
 
 
 
-
-        /* const [activeHeart, setActiveHeart] = useState (false);
- < IconButton onClick={()=>setActiveHeart (!activeHeart)
-      } 
-      {activeHeart?(
-           <FavoriteIcon className='fav'/>
-         ):(<FavoriteIcon/>
-         )}
-       </ IconButton>
-       
-           <FavoriteIcon className='fav'/>
-         ):(<FavoriteIcon/>
-         )}
-       </ IconButton> */
 

@@ -5,6 +5,7 @@ import Menu from './Components/Navbar'
 import FilteredMovies from './Components/FilteredMovies'
 import {FilteredSeries} from './Components/FilteredSeries'
 import Favorite from './Components/Favorite'
+import {WatchedList} from './Components/WatchedList'
 import Footer from './Components/Footer'
 import { useState, useEffect } from 'react'
 
@@ -27,28 +28,61 @@ function App() {
       setSearchInput(event.target.value)
    }
 
-  //increment to favorite===============================================
+  //increment the wishlist==============================================
   const [favorite, setFavorite] = useState(0)
   const getFavorite = () => {
-    setFavorite(favorite + 1)
+    setFavorite(favoriteValue.length+1)
   }
 
-  //add to favorite====================================================
+  //add to the wishlist=================================================
   const [favoriteValue, setFavoriteValue] = useState([])
   const getFavoriteValue = (element) =>{
-    //COPY the movies n pass element into it
-    setFavoriteValue([...favoriteValue, element])
-    getFavorite()
+    //favoriteValue.push(element)
+    setFavoriteValue(favoriteValue => [...favoriteValue, element])
+    console.log(favoriteValue);
+    getFavorite()    
   }
 
+  //add to watched list================================================
+  const[watchedList, setWatchedList] = useState([])
+  const getWatchedList = (element) => {
+    setWatchedList(watchedList => [...watchedList, element])
+  }
+
+  //remove from the watched list===========================================
+  const removeFromWatchedlist = (element) => {
+    let index = watchedList.indexOf(element)
+    if (index !== -1) {
+      watchedList.splice(index, 1);
+      setWatchedList(watchedList)}
+  }
+
+  //remove from the wishlist===========================================
+  const removeFromWishlist = (element) => {
+    let index = favoriteValue.indexOf(element)
+    if (index !== -1) {
+      favoriteValue.splice(index, 1);
+      setFavoriteValue(favoriteValue)}
+    //delete favoriteValue[index]
+    setFavorite(favorite - 1)
+  }
+
+  //remove all from the wishlist=======================================
+  const removeAllWishlist = () => {
+    setFavoriteValue([])
+    setFavorite(0)
+  }
+
+  
  
   return (
     <BrowserRouter>
          <Menu favorite={favorite} getSearchInput={getSearchInput}/> 
-         <Route exact path="/"><Home movies={movies} searchInput = {searchInput} getFavoriteValue={getFavoriteValue}/></Route>
-         <Route path="/FilteredMovies"><FilteredMovies searchInput={searchInput} movies={movies} getFavorite={getFavorite}/></Route>
-         <Route path="/FilteredSeries"><FilteredSeries searchInput={searchInput} movies={movies} getFavorite={getFavorite}/></Route>
-         <Route path="/Favorite"><Favorite favoriteValue={favoriteValue} getFavoriteValue={getFavoriteValue}/></Route>
+         <Route exact path="/"><Home movies={movies} searchInput = {searchInput} getFavoriteValue={getFavoriteValue}  getWatchedList={getWatchedList}/></Route>
+         <Route path="/FilteredMovies"><FilteredMovies searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
+         <Route path="/FilteredSeries"><FilteredSeries searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
+         <Route path="/WatchedList"><WatchedList searchInput={searchInput} watchedList={watchedList} removeFromWatchedlist={removeFromWatchedlist}/></Route>
+         <Route path="/Favorite"><Favorite favoriteValue={favoriteValue} getFavoriteValue={getFavoriteValue} removeFromWishlist={removeFromWishlist} removeAllWishlist={removeAllWishlist}/></Route>
          <Footer/>
     </BrowserRouter>
   );

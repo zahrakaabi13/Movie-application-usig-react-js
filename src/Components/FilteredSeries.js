@@ -1,6 +1,6 @@
 import {Card} from 'react-bootstrap'
 
-export const FilteredSeries = ({searchInput, movies, getFavorite}) =>{
+export const FilteredSeries = ({searchInput, movies, getFavoriteValue}) =>{
     return (
         <>
         <div className="cards mt-5 pt-5">
@@ -21,7 +21,7 @@ export const FilteredSeries = ({searchInput, movies, getFavorite}) =>{
                     <Card.Title className="movie--title">{element.Title}</Card.Title>
                     <span className="text-movie">{element.Year}</span>
                     <span className="movie--icons">
-                        <span onClick={getFavorite}><i class="fas fa-heart"></i></span>
+                        <span onClick={()=>getFavoriteValue(element)}><i class="fas fa-heart"></i></span>
                         <span><i class="fas fa-eye"></i></span>
                         <span><i class="fas fa-star"></i></span>
                         <span>{element.Rate}</span>

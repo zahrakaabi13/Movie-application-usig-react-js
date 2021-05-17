@@ -14,7 +14,7 @@ function Menu({getSearchInput, favorite}){
                         <Link className="linked--page" to="/">Home</Link>
                         <Link className="linked--page" to="/FilteredMovies">Movies</Link>
                         <Link className="linked--page" to="/FilteredSeries">Series</Link>
-                        <Link className="linked--page" to="/FilteredSeries">Watched</Link>
+                        <Link className="linked--page" to="/WatchedList">Watched</Link>
                         <Form inline>
                             <FormControl type="text" placeholder="SEARCH" onChange={getSearchInput}/>
                             <Button variant="outline-secondary"><i class="fas fa-search  "></i></Button>
