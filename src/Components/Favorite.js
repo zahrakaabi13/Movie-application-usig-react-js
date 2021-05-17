@@ -3,12 +3,18 @@ import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
 
-export default function Favorite({favoriteValue,removeFromWishlist,removeAllWishlist}){
+export default function Favorite({favoriteValue,removeFromWishlist,removeAllWishlist, searchInput}){
 return (
     <>
      <div className="cards mt-5 pt-5" id="wishlist">
           
-           {favoriteValue.map(element =>
+           {favoriteValue.filter((filtredElement)=>{
+                if (searchInput === ""){
+                    return filtredElement
+                }else if (filtredElement.Title.toLowerCase().includes(searchInput.toLowerCase())){
+                    return filtredElement
+                }
+            }).map(element =>
 
             <div className="container mx-5 px-4 mt-5">
             <Row>

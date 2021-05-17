@@ -1,11 +1,15 @@
-import {Row,Col} from 'react-bootstrap'
-
-export const WatchedList = ({watchedList, removeFromWatchedlist}) =>{
+export const WatchedList = ({watchedList, removeFromWatchedlist, searchInput}) =>{
     return (
         <>
         <div className="container watchedList mt-5 pt-5">
           
-          {watchedList.map(element =>
+          {watchedList.filter((filtredElement)=>{
+                if (searchInput === ""){
+                    return filtredElement
+                }else if (filtredElement.Title.toLowerCase().includes(searchInput.toLowerCase())){
+                    return filtredElement
+                }
+            }).map(element =>
 
            <div className="mt-5">
                   <img className="fav--movie--pic" src={element.Poster} alt={element.Title}/>

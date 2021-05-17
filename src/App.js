@@ -38,18 +38,19 @@ function App() {
   const [favoriteValue, setFavoriteValue] = useState([])
   const getFavoriteValue = (element) =>{
     //favoriteValue.push(element)
-    setFavoriteValue(favoriteValue => [...favoriteValue, element])
-    console.log(favoriteValue);
-    getFavorite()    
+      setFavoriteValue(favoriteValue => [...favoriteValue, element])
+      getFavorite()
+   
   }
 
-  //add to watched list================================================
+
+  //add to watched list=================================================
   const[watchedList, setWatchedList] = useState([])
   const getWatchedList = (element) => {
     setWatchedList(watchedList => [...watchedList, element])
   }
 
-  //remove from the watched list===========================================
+  //remove from the watched list========================================
   const removeFromWatchedlist = (element) => {
     let index = watchedList.indexOf(element)
     if (index !== -1) {
@@ -57,7 +58,7 @@ function App() {
       setWatchedList(watchedList)}
   }
 
-  //remove from the wishlist===========================================
+  //remove from the wishlist============================================
   const removeFromWishlist = (element) => {
     let index = favoriteValue.indexOf(element)
     if (index !== -1) {
@@ -67,7 +68,7 @@ function App() {
     setFavorite(favorite - 1)
   }
 
-  //remove all from the wishlist=======================================
+  //remove all from the wishlist========================================
   const removeAllWishlist = () => {
     setFavoriteValue([])
     setFavorite(0)
@@ -82,7 +83,7 @@ function App() {
          <Route path="/FilteredMovies"><FilteredMovies searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
          <Route path="/FilteredSeries"><FilteredSeries searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
          <Route path="/WatchedList"><WatchedList searchInput={searchInput} watchedList={watchedList} removeFromWatchedlist={removeFromWatchedlist}/></Route>
-         <Route path="/Favorite"><Favorite favoriteValue={favoriteValue} getFavoriteValue={getFavoriteValue} removeFromWishlist={removeFromWishlist} removeAllWishlist={removeAllWishlist}/></Route>
+         <Route path="/Favorite"><Favorite searchInput={searchInput} favoriteValue={favoriteValue} getFavoriteValue={getFavoriteValue} removeFromWishlist={removeFromWishlist} removeAllWishlist={removeAllWishlist}/></Route>
          <Footer/>
     </BrowserRouter>
   );
