@@ -38,9 +38,10 @@ function App() {
   const [favoriteValue, setFavoriteValue] = useState([])
   const getFavoriteValue = (element) =>{
     //favoriteValue.push(element)
+    //if (!favoriteValue.some(alreadyFavorite => alreadyFavorite.Title == element.id)){
       setFavoriteValue(favoriteValue => [...favoriteValue, element])
       getFavorite()
-   
+    //}
   }
 
 
