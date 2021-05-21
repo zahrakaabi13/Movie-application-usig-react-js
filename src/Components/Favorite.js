@@ -48,11 +48,6 @@ return (
             </div>
 
 
-
-
-
-
-
             /* <Card className="movie">
                 <Card.Img variant="top" className="img" src={element.Poster} />
                 <Card.Body className="card-body">

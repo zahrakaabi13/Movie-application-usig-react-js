@@ -426,3 +426,20 @@ body{
   margin-top: 5%;
   cursor: pointer;
 }
+/*Post movie=====
+=====================================================================*/
+.spacer{
+   margin-top : 6%;
+}
+.thead--movie--table{
+  background : #fff;
+  margin-top : 400px !important;
+}
+.post-size-img{
+  min-height:50px;
+  width:70px
+}
+.buttons{
+  position:absolute;
+  right : 2%
+}
