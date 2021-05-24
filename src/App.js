@@ -8,7 +8,7 @@ import Favorite from './Components/Favorite'
 import {WatchedList} from './Components/WatchedList'
 import Footer from './Components/Footer'
 import { useState, useEffect } from 'react'
-import {Dashboard} from './Components/Dashboard'
+import {Admin} from './Components/Admin'
 import axios from 'axios';
 
 
@@ -96,7 +96,7 @@ function App() {
          <Route path="/FilteredSeries"><FilteredSeries searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
          <Route path="/WatchedList"><WatchedList searchInput={searchInput} watchedList={watchedList} removeFromWatchedlist={removeFromWatchedlist}/></Route>
          <Route path="/Favorite"><Favorite searchInput={searchInput} favoriteValue={favoriteValue} getFavoriteValue={getFavoriteValue} removeFromWishlist={removeFromWishlist} removeAllWishlist={removeAllWishlist}/></Route>
-         <Route path="/admin"><Dashboard movies={movies}/></Route>
+         <Route path="/admin"><Admin movies={movies}/></Route>
          <Footer/>
     </BrowserRouter>
   );
