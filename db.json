@@ -302,6 +302,24 @@
       "Type": "series",
       "totalSeasons": "1",
       "Rate": "8.3"
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "la casa de papel",
+      "Genre": "action, drama",
+      "id": 17
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "la casa de papel",
+      "Genre": "action, drama",
+      "id": 18
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "la casa de papel",
+      "Genre": "action, drama",
+      "id": 19
     }
   ],
   "comments": [],

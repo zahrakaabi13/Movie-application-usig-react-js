@@ -1,15 +1,23 @@
 import {Table, Button, Modal, Form} from 'react-bootstrap'
 import 'react-rater/lib/react-rater.css'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import axios from 'axios'
 
 
 export const Admin = ({movies, searchInput}) => {
 
-  //Declaring Modal states===================================
+  //Declaring Modal add states===============================
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  //DEclaring Modal Updating state===========================
+  const [showEdit, setShowEdit] = useState(false);
+  const handleClose1 = () => setShowEdit(false);
+  const handleShow1 = () => setShow(true);
+
+
+
 
   //Posting data from db.json================================
   //Declaring form input's state
@@ -38,7 +46,12 @@ export const Admin = ({movies, searchInput}) => {
   }
  
   //Editing data from db.json================================
-
+  /*const handleUpdate = async
+      axios.put(`http://localhost:3004/posts/${id}`,)
+      .then(response => {console.log('Status:' , response.status)
+                         console.log('Data : ', response.data)})
+      .catch(error => {  console.error('something went wrong', error)
+    })*/
   
   
 
@@ -116,7 +129,8 @@ return (
              </thead>
     
              <tbody>
-           {movies.map(element =>  
+           {movies.map(element => 
+                <>
                 <tr>
                 <td>{element.id}</td>
                 <td><img src={element.Poster} alt={element.Title} className="post-size-img"/></td>
@@ -125,10 +139,27 @@ return (
                 <td>
                    <span>
                    <Button variant="danger" onClick={ () =>handleDelete(element.id)}><i class="far fa-trash-alt"></i></Button>
-                   <Button variant="info"><i class="far fa-edit"></i></Button>
+                   <Button variant="info" onClick={handleShow1}><i class="far fa-edit"></i></Button>
                    </span>
                 </td>
                 </tr>
+
+
+                <Modal show={show} onHide={handleClose1}>
+                       <Modal.Header closeButton>
+                             <Modal.Title>Modal heading</Modal.Title>
+                       </Modal.Header>
+                       <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                       <Modal.Footer>
+                         <Button variant="secondary" onClick={handleClose1}>
+                          Close
+                         </Button>
+                         <Button variant="primary" onClick={handleClose1}>
+                          Save Changes
+                          </Button>
+                        </Modal.Footer>
+                 </Modal>
+                </>
                 )}
                 </tbody>
             </Table>
