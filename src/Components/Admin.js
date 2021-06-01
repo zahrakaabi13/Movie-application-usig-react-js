@@ -1,6 +1,7 @@
 import {Table, Button, Modal, Form} from 'react-bootstrap'
 import 'react-rater/lib/react-rater.css'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
+import {UpdatedModal} from './UpdatedModal'
 import axios from 'axios'
 
 
@@ -11,14 +12,6 @@ export const Admin = ({movies, searchInput}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  //DEclaring Modal Updating state===========================
-  const [showEdit, setShowEdit] = useState(false);
-  const handleClose1 = () => setShowEdit(false);
-  const handleShow1 = () => setShow(true);
-
-
-
-
   //Posting data from db.json================================
   //Declaring form input's state
   const [input, setInput] = useState({
@@ -27,40 +20,31 @@ export const Admin = ({movies, searchInput}) => {
       Genre : ""
   }) 
   
-  //Posting data to the db.josn==============================
-  const handleSubmit = e => {
+  //Posting data to the db.json==============================
+  const handleSubmit = async (e) => {
   e.preventDefault()
-      axios.post(`http://localhost:3004/posts`,input)
-      .then(response => {console.log(response); console.log(response.data)})
+      await axios.post(`https://movieapp-10554-default-rtdb.firebaseio.com/posts.json`,input)
+      .then(response => {console.log(response)
+                      console.log(response.data)})
       .catch(error => console.log(error))
   }
 
   //Delete data from db.json=================================
   const handleDelete = async (id) => {
-    let confirmDelete = window.confirm("Are you sure to delete this movie?");
+    let confirmDelete = window.confirm("Are you sure to delete this movie?")
         if (confirmDelete) {
-        await axios.delete(`http://localhost:3004/posts/${id}`,input)
+        await axios.delete(`https://movieapp-10554-default-rtdb.firebaseio.com/posts/${id}.json`)
         .then(response => {console.log(response); console.log(response.data)})
         .catch(error => console.log(error))
         } 
   }
- 
-  //Editing data from db.json================================
-  /*const handleUpdate = async
-      axios.put(`http://localhost:3004/posts/${id}`,)
-      .then(response => {console.log('Status:' , response.status)
-                         console.log('Data : ', response.data)})
-      .catch(error => {  console.error('something went wrong', error)
-    })*/
-  
-  
 
 return (
     <>
      <div className="spacer">
       <div className="buttons">
-      <button>Remove all</button>
-      <button onClick={handleShow}><i class="fas fa-plus"></i></button>
+        <button>Remove all</button>
+        <button onClick={handleShow}><i class="fas fa-plus"></i></button>
       </div>
     
     <Modal show={show} onHide={handleClose}>
@@ -129,36 +113,20 @@ return (
              </thead>
     
              <tbody>
-           {movies.map(element => 
+           {Object.keys(movies).map(element => 
                 <>
                 <tr>
-                <td>{element.id}</td>
-                <td><img src={element.Poster} alt={element.Title} className="post-size-img"/></td>
-                <td>{element.Title}</td>
-                <td>{element.Genre}</td>
+                <td>{movies[element].id}</td>
+                <td><img src={movies[element].Poster} alt={movies[element].Title} className="post-size-img"/></td>
+                <td>{movies[element].Title}</td>
+                <td>{movies[element].Genre}</td>
                 <td>
                    <span>
-                   <Button variant="danger" onClick={ () =>handleDelete(element.id)}><i class="far fa-trash-alt"></i></Button>
-                   <Button variant="info" onClick={handleShow1}><i class="far fa-edit"></i></Button>
+                   <Button variant="danger" onClick={ () =>handleDelete(element)}><i class="far fa-trash-alt"></i></Button>
+                   <UpdatedModal element={movies[element]} x={element} />
                    </span>
                 </td>
                 </tr>
-
-
-                <Modal show={show} onHide={handleClose1}>
-                       <Modal.Header closeButton>
-                             <Modal.Title>Modal heading</Modal.Title>
-                       </Modal.Header>
-                       <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                       <Modal.Footer>
-                         <Button variant="secondary" onClick={handleClose1}>
-                          Close
-                         </Button>
-                         <Button variant="primary" onClick={handleClose1}>
-                          Save Changes
-                          </Button>
-                        </Modal.Footer>
-                 </Modal>
                 </>
                 )}
                 </tbody>

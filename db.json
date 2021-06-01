@@ -1,22 +1,10 @@
 {
   "posts": [
     {
-      "id": 1,
-      "Title": "Avatar",
-      "Year": "2009",
-      "Runtime": "162 min",
-      "Genre": "Action, Adventure, Fantasy",
-      "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
-      "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-      "Language": "English, Spanish",
-      "Country": "USA, UK",
-      "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
       "Poster": "https://i.pinimg.com/736x/0c/4f/8f/0c4f8fe58a8f06bdd7e63550aa7bf338.jpg",
-      "Metascore": "83",
-      "imdbRating": "7.9",
-      "imdbVotes": "890,617",
-      "Type": "movie",
-      "Rate": "8.0"
+      "Title": "Avatar222222",
+      "Genre": "Action, Adventure, Fantasy",
+      "id": 1
     },
     {
       "id": 2,
@@ -38,7 +26,6 @@
       "Rate": "6.4"
     },
     {
-      "id": 3,
       "Title": "300",
       "Year": "2006",
       "Runtime": "117 min",
@@ -320,6 +307,42 @@
       "Title": "la casa de papel",
       "Genre": "action, drama",
       "id": 19
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "Avatar11",
+      "Genre": "action, drama",
+      "id": 20
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "3001",
+      "Genre": "action, drama",
+      "id": 21
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "la casa de papel2222222",
+      "Genre": "action, drama",
+      "id": 22
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "web developer",
+      "Genre": "action, drama",
+      "id": 23
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "zouhour",
+      "Genre": "action, drama",
+      "id": 24
+    },
+    {
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "Title": "zouhour",
+      "Genre": "action, drama",
+      "id": 25
     }
   ],
   "comments": [],

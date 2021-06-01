@@ -27,8 +27,9 @@ function App() {
   //calling the json file using axios===================================
   const [movies, setMovies] = useState([])
   useEffect(()=>{
-    axios.get(`http://localhost:3004/posts`)
-    .then( response => setMovies(response.data))
+    axios.get('https://movieapp-10554-default-rtdb.firebaseio.com/posts.json')
+    .then( response => {setMovies(response.data)
+                        console.log(response.data)})
     .catch( error => console.log(error))
   },[])
 
