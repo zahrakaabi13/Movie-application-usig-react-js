@@ -1,10 +1,23 @@
 {
   "posts": [
     {
-      "Poster": "https://i.pinimg.com/736x/0c/4f/8f/0c4f8fe58a8f06bdd7e63550aa7bf338.jpg",
-      "Title": "Avatar222222",
+      "id": 1,
+      "Title": "Avatar",
+      "Year": "2007",
+      "Runtime": "101 min",
       "Genre": "Action, Adventure, Fantasy",
-      "id": 1
+      "Actors": "https://i.pinimg.com/736x/0c/4f/8f/0c4f8fe58a8f06bdd7e63550aa7bf338.jpg",
+      "Director": "Francis Lawrence",
+      "Plot": "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "9 wins & 21 nominations.",
+      "Poster": "https://m.media-amazon.com/images/I/91Xmg5sQQZL._AC_SY741_.jpg",
+      "Metascore": "65",
+      "imdbRating": "7.2",
+      "imdbVotes": "533,874",
+      "Type": "movie",
+      "Rate": "6.4"
     },
     {
       "id": 2,
@@ -26,6 +39,7 @@
       "Rate": "6.4"
     },
     {
+      "id":3,
       "Title": "300",
       "Year": "2006",
       "Runtime": "117 min",

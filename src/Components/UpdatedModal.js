@@ -31,7 +31,6 @@ export const UpdatedModal = ({element,x}) => {
                        setInput(response.data)})
     .catch(error => console.error('something went wrong', error)
     )}
-
     
   return(
       <>

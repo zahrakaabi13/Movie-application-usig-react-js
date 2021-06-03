@@ -7,14 +7,13 @@ import {FilteredSeries} from './Components/FilteredSeries'
 import Favorite from './Components/Favorite'
 import {WatchedList} from './Components/WatchedList'
 import Footer from './Components/Footer'
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 import {Admin} from './Components/Admin'
 import axios from 'axios';
 
 
 
-
-function App() {
+const App = () => {
 
   //calling the json file using fetch==================================
   // const [movies,setMovies] = useState([])
@@ -86,9 +85,7 @@ function App() {
     setFavoriteValue([])
     setFavorite(0)
   }
-
   
- 
   return (
     <BrowserRouter>
          <Menu favorite={favorite} getSearchInput={getSearchInput}/> 

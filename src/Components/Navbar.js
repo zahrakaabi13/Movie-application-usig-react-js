@@ -1,6 +1,6 @@
 import {Nav, Navbar, Button, Form, FormControl} from 'react-bootstrap'
 import {Link} from "react-router-dom"
-
+import {SignUp} from './Signup'
 
 function Menu({getSearchInput, favorite}){
 
@@ -20,6 +20,7 @@ function Menu({getSearchInput, favorite}){
                             <Button variant="outline-secondary"><i class="fas fa-search  "></i></Button>
                         </Form>
                         <Link className="heart" to="/Favorite"><i class="fas fa-heart"></i><span className="favorite--value">{favorite}</span></Link>
+                        <SignUp/>
                     </Nav>
                 </Navbar.Collapse>
                 </Navbar>

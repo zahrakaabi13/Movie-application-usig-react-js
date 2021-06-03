@@ -5,7 +5,7 @@ import {UpdatedModal} from './UpdatedModal'
 import axios from 'axios'
 
 
-export const Admin = ({movies, searchInput}) => {
+export const Admin = ({movies}) => {
 
   //Declaring Modal add states===============================
   const [show, setShow] = useState(false);
@@ -39,11 +39,21 @@ export const Admin = ({movies, searchInput}) => {
         } 
   }
 
+  //Delete all the data from db.json=================================
+  const handleDeleteAll = async () => {
+    let confirmDelete = window.confirm("Are you sure to delete all the movies?")
+        if (confirmDelete) {
+        await axios.delete(`https://movieapp-10554-default-rtdb.firebaseio.com/posts.json`)
+        .then(response => {console.log(response); console.log(response.data)})
+        .catch(error => console.log(error))
+        } 
+  }
+
 return (
     <>
      <div className="spacer">
       <div className="buttons">
-        <button>Remove all</button>
+        <button onClick={handleDeleteAll}>Remove all</button>
         <button onClick={handleShow}><i class="fas fa-plus"></i></button>
       </div>
     
@@ -100,8 +110,8 @@ return (
                     return filtredElement
                 }
             }) */}
-        <div className="container thead--movie--table">
-         <Table bordered hover size="sm">
+        <div className="container">
+         <Table bordered hover size="sm" className="thead--movie--table text-center">
              <thead>
                 <tr>
                 <th>#</th>

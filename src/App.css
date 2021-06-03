@@ -72,6 +72,11 @@ body{
   font-weight: bold;
   color: var(--clr-primary-light) !important;
 }
+.ninja-icon{
+  position: absolute;
+  top: 15px !important;
+  right: 7%;
+}
 
 .heart:hover, .linked--brand:hover,
 .linked--page:hover{
