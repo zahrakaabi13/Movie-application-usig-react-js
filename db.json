@@ -12,7 +12,7 @@
       "Language": "English",
       "Country": "USA",
       "Awards": "9 wins & 21 nominations.",
-      "Poster": "https://m.media-amazon.com/images/I/91Xmg5sQQZL._AC_SY741_.jpg",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b0/Avatar-Teaser-Poster.jpg/220px-Avatar-Teaser-Poster.jpg",
       "Metascore": "65",
       "imdbRating": "7.2",
       "imdbVotes": "533,874",
@@ -303,60 +303,6 @@
       "Type": "series",
       "totalSeasons": "1",
       "Rate": "8.3"
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "la casa de papel",
-      "Genre": "action, drama",
-      "id": 17
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "la casa de papel",
-      "Genre": "action, drama",
-      "id": 18
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "la casa de papel",
-      "Genre": "action, drama",
-      "id": 19
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "Avatar11",
-      "Genre": "action, drama",
-      "id": 20
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "3001",
-      "Genre": "action, drama",
-      "id": 21
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "la casa de papel2222222",
-      "Genre": "action, drama",
-      "id": 22
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "web developer",
-      "Genre": "action, drama",
-      "id": 23
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "zouhour",
-      "Genre": "action, drama",
-      "id": 24
-    },
-    {
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDcxOGI0MDYtNTc5NS00NDUzLWFkOTItNDIxZjI0OTllNTljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "Title": "zouhour",
-      "Genre": "action, drama",
-      "id": 25
     }
   ],
   "comments": [],

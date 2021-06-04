@@ -1,3 +1,5 @@
+import Menu from './Navbar'
+
 export const WatchedList = ({watchedList, removeFromWatchedlist, searchInput}) =>{
     return (
         <>

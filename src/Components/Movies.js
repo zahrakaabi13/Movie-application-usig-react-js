@@ -1,4 +1,5 @@
 import {Card} from 'react-bootstrap'
+import Menu from './Navbar'
 
 
 //child is the navbar

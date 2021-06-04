@@ -12,8 +12,8 @@ function Menu({getSearchInput, favorite}){
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
                         <Link className="linked--page" to="/">Home</Link>
-                        <Link className="linked--page" to="/FilteredMovies">Movies</Link>
-                        <Link className="linked--page" to="/FilteredSeries">Series</Link>
+                        <Link className="linked--page" to="/Movies">Movies</Link>
+                        <Link className="linked--page" to="/Series">Series</Link>
                         <Link className="linked--page" to="/WatchedList">Watched</Link>
                         <Form inline>
                             <FormControl type="text" placeholder="SEARCH" onChange={getSearchInput}/>

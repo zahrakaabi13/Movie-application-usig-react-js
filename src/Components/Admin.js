@@ -19,15 +19,20 @@ export const Admin = ({movies}) => {
       Title : "",
       Genre : ""
   }) 
-  
+  const refresh = ()=> {
+    window.location.reload()
+}
   //Posting data to the db.json==============================
   const handleSubmit = async (e) => {
   e.preventDefault()
       await axios.post(`https://movieapp-10554-default-rtdb.firebaseio.com/posts.json`,input)
       .then(response => {console.log(response)
                       console.log(response.data)})
+      .then(response => refresh())
       .catch(error => console.log(error))
   }
+
+  
 
   //Delete data from db.json=================================
   const handleDelete = async (id) => {
@@ -35,6 +40,7 @@ export const Admin = ({movies}) => {
         if (confirmDelete) {
         await axios.delete(`https://movieapp-10554-default-rtdb.firebaseio.com/posts/${id}.json`)
         .then(response => {console.log(response); console.log(response.data)})
+        .then(response => refresh())
         .catch(error => console.log(error))
         } 
   }
@@ -45,6 +51,7 @@ export const Admin = ({movies}) => {
         if (confirmDelete) {
         await axios.delete(`https://movieapp-10554-default-rtdb.firebaseio.com/posts.json`)
         .then(response => {console.log(response); console.log(response.data)})
+        .then(response => refresh())
         .catch(error => console.log(error))
         } 
   }
@@ -133,7 +140,7 @@ return (
                 <td>
                    <span>
                    <Button variant="danger" onClick={ () =>handleDelete(element)}><i class="far fa-trash-alt"></i></Button>
-                   <UpdatedModal element={movies[element]} x={element} />
+                   <UpdatedModal element={movies[element]} x={element} refresh={refresh}/>
                    </span>
                 </td>
                 </tr>

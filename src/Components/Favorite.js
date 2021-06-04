@@ -2,7 +2,6 @@ import {Col, Row} from 'react-bootstrap'
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
-
 export default function Favorite({favoriteValue,removeFromWishlist,removeAllWishlist, searchInput}){
 return (
     <>

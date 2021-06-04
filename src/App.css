@@ -66,7 +66,7 @@ body{
   border-radius: 50% ;
   font-size: .5em;
   position: absolute;
-  top: 14px;
+  top: 12px !important;
   right: 9%;
   z-index: 1;
   font-weight: bold;
@@ -438,7 +438,10 @@ body{
 }
 .thead--movie--table{
   background : #fff;
-  margin-top : 12% !important;
+  margin-top : 15% !important;
+}
+.table td{
+  vertical-align: middle !important;
 }
 .post-size-img{
   min-height:50px;
@@ -446,7 +449,7 @@ body{
 }
 .buttons{
   position:absolute;
-  right : 6%;
+  right : 6.5%;
   top:15%
 }
 .buttons button{

@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {Modal, Button} from 'react-bootstrap'
+import {Modal, Button, Tabs} from 'react-bootstrap'
 
 export const SignUp = () => {
 
@@ -18,8 +18,24 @@ export const SignUp = () => {
                    <Modal.Title>Join us Now!</Modal.Title>
                 </Modal.Header>
 
-                <Modal.Body>hello</Modal.Body>
-
+                <Modal.Body>
+                    {/* <Tabs
+                    id="controlled-tab-example"
+                    activeKey={key}
+                    onSelect={(k) => setKey(k)}
+                    className="mb-3"
+                    >
+                    <Tab eventKey="home" title="Home">
+                        <Sonnet />
+                    </Tab>
+                    <Tab eventKey="profile" title="Profile">
+                        <Sonnet />
+                    </Tab>
+                    <Tab eventKey="contact" title="Contact" disabled>
+                    <Sonnet />
+                    </Tab>
+                </Tabs> */}
+                </Modal.Body>
                 {/* <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                     Close

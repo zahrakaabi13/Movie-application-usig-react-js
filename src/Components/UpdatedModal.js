@@ -2,7 +2,7 @@ import {useState} from 'react'
 import {Button, Modal, Form} from 'react-bootstrap'
 import axios from 'axios'
 
-export const UpdatedModal = ({element,x}) => {
+export const UpdatedModal = ({element,x, refresh}) => {
     
     //Declaring Update Modal states=========================
     const [show, setShow] = useState(false);
@@ -21,6 +21,7 @@ export const UpdatedModal = ({element,x}) => {
     const handleChangeUpdate = e => {
         const {name, value} = e.target
         setInput({...input, [name]:value})
+        console.log(input)
     }
 
     //Editing data from db.json================================
@@ -29,6 +30,8 @@ export const UpdatedModal = ({element,x}) => {
     .then(response => {console.log('Status:' , response.status)
                        console.log('Data : ', response.data)
                        setInput(response.data)})
+    .then(response => {refresh()
+                       console.log(response)})
     .catch(error => console.error('something went wrong', error)
     )}
     

@@ -1,5 +1,6 @@
 import Landing from "./Landingpage"
 import Movies from "./Movies"
+import Menu from './Navbar'
 
 
 function Home({movies,getFavoriteValue,searchInput, getWatchedList}){

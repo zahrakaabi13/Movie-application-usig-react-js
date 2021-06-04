@@ -88,10 +88,10 @@ const App = () => {
   
   return (
     <BrowserRouter>
-         <Menu favorite={favorite} getSearchInput={getSearchInput}/> 
+         <Menu favorite={favorite} getSearchInput={getSearchInput}/>
          <Route exact path="/"><Home movies={movies} searchInput = {searchInput} getFavoriteValue={getFavoriteValue}  getWatchedList={getWatchedList}/></Route>
-         <Route path="/FilteredMovies"><FilteredMovies searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
-         <Route path="/FilteredSeries"><FilteredSeries searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
+         <Route path="/Movies"><FilteredMovies searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
+         <Route path="/Series"><FilteredSeries searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
          <Route path="/WatchedList"><WatchedList searchInput={searchInput} watchedList={watchedList} removeFromWatchedlist={removeFromWatchedlist}/></Route>
          <Route path="/Favorite"><Favorite searchInput={searchInput} favoriteValue={favoriteValue} getFavoriteValue={getFavoriteValue} removeFromWishlist={removeFromWishlist} removeAllWishlist={removeAllWishlist}/></Route>
          <Route path="/admin"><Admin movies={movies}/></Route>

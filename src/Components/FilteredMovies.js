@@ -1,10 +1,10 @@
 import {Card} from 'react-bootstrap'
+import Menu from './Navbar'
 
 
 export default function FilteredMovies({movies, searchInput, getFavoriteValue}){
 
 
-    
     return (
         <div>
            <div className="cards mt-5 pt-5">
