@@ -12,7 +12,6 @@ export const SignUp = () => {
   return(
         <>
             <i class="fas fa-user-ninja heart ninja-icon" onClick={handleShow}></i>
-
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
                    <Modal.Title>Join us Now!</Modal.Title>

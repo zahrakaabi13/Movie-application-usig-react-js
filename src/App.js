@@ -33,7 +33,7 @@ const App = () => {
   },[])
 
 
-   //value of the input=================================================
+   //value of the search input=================================================
    const [searchInput, setSearchInput] = useState("")
    const getSearchInput = (event) =>{
       setSearchInput(event.target.value)
@@ -94,7 +94,7 @@ const App = () => {
          <Route path="/Series"><FilteredSeries searchInput={searchInput} movies={movies} getFavoriteValue={getFavoriteValue}/></Route>
          <Route path="/WatchedList"><WatchedList searchInput={searchInput} watchedList={watchedList} removeFromWatchedlist={removeFromWatchedlist}/></Route>
          <Route path="/Favorite"><Favorite searchInput={searchInput} favoriteValue={favoriteValue} getFavoriteValue={getFavoriteValue} removeFromWishlist={removeFromWishlist} removeAllWishlist={removeAllWishlist}/></Route>
-         <Route path="/admin"><Admin movies={movies}/></Route>
+         <Route path="/admin"><Admin movies={movies} searchInput={searchInput}/></Route>
          <Footer/>
     </BrowserRouter>
   );

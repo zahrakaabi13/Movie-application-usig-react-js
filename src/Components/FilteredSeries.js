@@ -7,13 +7,11 @@ export const FilteredSeries = ({searchInput, movies, getFavoriteValue}) =>{
         <div className="cards mt-5 pt-5">
 
             {movies.filter((filtredElement)=>{
-                
-                if ((searchInput === "") && (filtredElement.Type === "movie")){
+                if (filtredElement.Type === "movie"){
                     return 
                 }else if ((filtredElement.Type === "series") && filtredElement.Title.toLowerCase().includes(searchInput.toLowerCase())){
                     return filtredElement
                 }
-
             }).map(element =>
 
             <Card className="movie">

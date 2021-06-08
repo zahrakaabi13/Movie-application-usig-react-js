@@ -9,13 +9,11 @@ export default function FilteredMovies({movies, searchInput, getFavoriteValue}){
         <div>
            <div className="cards mt-5 pt-5">
             {movies.filter((filtredElement)=>{
-
-                if ((searchInput === "") && (filtredElement.Type === "series")){
-                    return 
+                if (filtredElement.Type === "series"){
+                    return
                 }else if ((filtredElement.Type === "movie") && filtredElement.Title.toLowerCase().includes(searchInput.toLowerCase())){
                     return filtredElement
-                }
-                
+                }   
             }).map(element =>
 
             <Card className="movie">

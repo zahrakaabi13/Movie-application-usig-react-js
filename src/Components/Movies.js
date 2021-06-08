@@ -9,13 +9,9 @@ function Movies({searchInput, getFavoriteValue, movies, getWatchedList}){
         <>
         <div className="cards mt-5 pt-5">
            
-           {movies.filter((filtredElement)=>{
-                if (searchInput === ""){
-                    return filtredElement
-                }else if (filtredElement.Title.toLowerCase().includes(searchInput.toLowerCase())){
-                    return filtredElement
-                }
-            }).map(element =>
+        {movies.filter((filtredElement)=>
+                filtredElement.Title.toLowerCase().includes(searchInput.toLowerCase()))
+                .map(element =>
 
             <Card className="movie">
                 <Card.Img variant="top" className="img" src={element.Poster} />

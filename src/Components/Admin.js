@@ -5,7 +5,7 @@ import {UpdatedModal} from './UpdatedModal'
 import axios from 'axios'
 
 
-export const Admin = ({movies}) => {
+export const Admin = ({movies, searchInput}) => {
 
   //Declaring Modal add states===============================
   const [show, setShow] = useState(false);
@@ -110,13 +110,7 @@ return (
 
 {/*      
      <div className="cards mt-5 pt-5" id="wishlist"> */}
-     {/* .filter( filtredElement =>{
-                if (searchInput === "") {
-                    return filtredElement
-                }else if (filtredElement.Title.toLowerCase().includes(searchInput.toLowerCase())){
-                    return filtredElement
-                }
-            }) */}
+     
         <div className="container">
          <Table bordered hover size="sm" className="thead--movie--table text-center">
              <thead>
@@ -130,7 +124,9 @@ return (
              </thead>
     
              <tbody>
-           {Object.keys(movies).map(element => 
+           {Object.keys(movies).filter( filtredElement => 
+           movies[filtredElement].Title.toLowerCase().includes(searchInput)
+           ).map(element => 
                 <>
                 <tr>
                 <td>{movies[element].id}</td>
